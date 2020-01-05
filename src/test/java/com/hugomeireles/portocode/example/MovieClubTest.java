@@ -48,8 +48,24 @@ public class MovieClubTest {
         movieClub.updateRentMovie(null, null);
     }
 
+    @Test(expected = IllegalArgumentException.class)
+    public void movieTitleIsNullThrowIllegalArgumentException() {
+        Movie movie = new Movie(null, 0,0, null);
+        Customer customer = new Customer(null, null, null);
+
+        movieClub.updateRentMovie(movie, customer);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void customerRatingIsNullThrowIllegalArgumentException() {
+        Movie starWars = new Movie("Star Wars", 150, 5, "fantasy");
+        Customer customer = new Customer(null, null, null);
+
+        movieClub.updateRentMovie(starWars, customer);
+    }
+
     @Test
-    public void customerRatingIsLowerRemoveOneDayOfDefaultDeliveryDays(){
+    public void customerRatingIsLowerRemoveOneDayOfDefaultDeliveryDays() {
         int defaultDeliveryDays = 3;
         int removeDays = 1;
 
@@ -65,7 +81,7 @@ public class MovieClubTest {
     }
 
     @Test
-    public void customerRatingIsMidApplyDefaultDeliveryDays(){
+    public void customerRatingIsMidApplyDefaultDeliveryDays() {
         int defaultDeliveryDays = 3;
 
         Customer johnDoe = new Customer("John", "Doe", "mid");
@@ -80,7 +96,7 @@ public class MovieClubTest {
     }
 
     @Test
-    public void customerRatingIsHighApplyDefaultDeliveryDaysPlusOne(){
+    public void customerRatingIsHighApplyDefaultDeliveryDaysPlusOne() {
         int defaultDeliveryDays = 3;
         int addDays = 1;
 

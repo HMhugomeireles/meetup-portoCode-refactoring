@@ -29,9 +29,12 @@ public class MovieClub {
                                 movie.addRent(new Rent(1, (3 + 1), customer));
                                 return movie;
                             }
+                        } else {
+                            throw new IllegalArgumentException();
                         }
                     }
-
+                } else {
+                    throw new IllegalArgumentException();
                 }
             }
         } else {
