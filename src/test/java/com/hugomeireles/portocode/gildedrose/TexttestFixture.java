@@ -1,4 +1,7 @@
-package com.hugomeireles.portocode;
+package com.hugomeireles.portocode.gildedrose;
+
+import com.hugomeireles.portocode.gildedrose.GildedRose;
+import com.hugomeireles.portocode.gildedrose.Item;
 
 public class TexttestFixture {
 

@@ -1,4 +1,4 @@
-package com.hugomeireles.portocode;
+package com.hugomeireles.portocode.gildedrose;
 
 public class Item {
 
