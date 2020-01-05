@@ -10,21 +10,16 @@ public class Main {
         Customer janeDoe = new Customer("Jane", "Doe", "mid");
         Customer tiffanyCook = new Customer("Tiffany", "Cook", "high");
 
-        List<Customer> customers = new ArrayList<Customer>();
-        customers.add(johnDoe);
-        customers.add(janeDoe);
-        customers.add(tiffanyCook);
-
         Movie starWars = new Movie("Star Wars", 150, 5, "fantasy");
         Movie johnWick = new Movie("John Wick", 180, 8, "action");
         Movie joker = new Movie("Joker", 120, 10, "Drama");
 
-        List<Movie> movies = new ArrayList<Movie>();
+        List<Movie> movies = new ArrayList<>();
         movies.add(starWars);
         movies.add(johnWick);
         movies.add(joker);
 
-        MovieClub movieClub = new MovieClub(customers, movies);
+        MovieClub movieClub = new MovieClub(movies);
 
         movieClub.updateRentMovie(starWars, janeDoe);
         movieClub.updateRentMovie(starWars, johnDoe);

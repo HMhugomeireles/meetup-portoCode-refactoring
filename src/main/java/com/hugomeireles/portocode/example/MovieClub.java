@@ -5,16 +5,14 @@ import java.util.List;
 public class MovieClub {
 
     public static final int DEFAULT_DELIVERY_DAYS = 3;
-    private List<Customer> customerList;
     private List<Movie> movieList;
 
-    public MovieClub(List<Customer> customerList, List<Movie> movieList) {
-        this.customerList = customerList;
+    public MovieClub(List<Movie> movieList) {
         this.movieList = movieList;
     }
 
     public Movie updateRentMovie(Movie movieToRent, Customer customer) {
-        if (movieToRent != null || customer != null) {
+        if (movieToRent != null && customer != null) {
             for (Movie movie : movieList) {
                 if (movie.getTitle() != null && movieToRent.getTitle() != null) {
                     if (movie.getTitle().equals(movieToRent.getTitle())) {
