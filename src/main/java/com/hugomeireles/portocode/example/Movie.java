@@ -13,40 +13,17 @@ public class Movie {
     private List<Rent> allRents;
 
     public Movie(String title, int duration, int rentPrice, String genre) {
+        //if (title == null) throw new IllegalArgumentException();
         this.title = title;
         this.duration = duration;
         this.rentPrice = rentPrice;
         this.genre = genre;
         this.isRented = false;
-        this.allRents = new ArrayList<Rent>();
-    }
-
-    public boolean getIsRented() {
-        return isRented;
-    }
-
-    public void setIsRented(boolean isRented) {
-        this.isRented = isRented;
+        this.allRents = new ArrayList<>();
     }
 
     public String getTitle() {
         return title;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    public int getDuration() {
-        return duration;
-    }
-
-    public int getRentPrice() {
-        return rentPrice;
-    }
-
-    public void setRentPrice(int rentPrice) {
-        this.rentPrice = rentPrice;
     }
 
     public List<Rent> getAllRents() {

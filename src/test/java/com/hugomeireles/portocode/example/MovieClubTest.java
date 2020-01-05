@@ -11,8 +11,6 @@ import java.util.List;
 
 public class MovieClubTest {
 
-    private List<Customer> customers;
-    private List<Movie> movies;
     private MovieClub movieClub;
 
     @Before
@@ -66,7 +64,7 @@ public class MovieClubTest {
 
     @Test
     public void customerRatingIsLowerRemoveOneDayOfDefaultDeliveryDays() {
-        int defaultDeliveryDays = 3;
+        int defaultDeliveryDays = MovieClub.DEFAULT_DELIVERY_DAYS;
         int removeDays = 1;
 
         Customer johnDoe = new Customer("John", "Doe", "lower");
@@ -82,7 +80,7 @@ public class MovieClubTest {
 
     @Test
     public void customerRatingIsMidApplyDefaultDeliveryDays() {
-        int defaultDeliveryDays = 3;
+        int defaultDeliveryDays = MovieClub.DEFAULT_DELIVERY_DAYS;
 
         Customer johnDoe = new Customer("John", "Doe", "mid");
         Movie starWars = new Movie("Star Wars", 150, 5, "fantasy");
@@ -97,7 +95,7 @@ public class MovieClubTest {
 
     @Test
     public void customerRatingIsHighApplyDefaultDeliveryDaysPlusOne() {
-        int defaultDeliveryDays = 3;
+        int defaultDeliveryDays = MovieClub.DEFAULT_DELIVERY_DAYS;
         int addDays = 1;
 
         Customer johnDoe = new Customer("John", "Doe", "high");

@@ -1,10 +1,10 @@
 package com.hugomeireles.portocode.example;
 
 import java.util.List;
-import java.util.Optional;
 
 public class MovieClub {
 
+    public static final int DEFAULT_DELIVERY_DAYS = 3;
     private List<Customer> customerList;
     private List<Movie> movieList;
 
@@ -20,13 +20,13 @@ public class MovieClub {
                     if (movie.getTitle().equals(movieToRent.getTitle())) {
                         if (customer.getRating() != null) {
                             if (customer.getRating().equals("lower")) {
-                                movie.addRent(new Rent(1, (3 - 1), customer));
+                                movie.addRent(new Rent((DEFAULT_DELIVERY_DAYS - 1), customer));
                                 return movie;
                             } else if (customer.getRating().equals("mid")) {
-                                movie.addRent(new Rent(1, (3), customer));
+                                movie.addRent(new Rent(DEFAULT_DELIVERY_DAYS, customer));
                                 return movie;
                             } else if (customer.getRating().equals("high")) {
-                                movie.addRent(new Rent(1, (3 + 1), customer));
+                                movie.addRent(new Rent((DEFAULT_DELIVERY_DAYS + 1), customer));
                                 return movie;
                             }
                         } else {
@@ -44,27 +44,11 @@ public class MovieClub {
         return null;
     }
 
-    public List<Movie> getMovieList() {
-        return movieList;
-    }
-
-    public Movie getMovie(final Movie movie) {
-        Movie movieTemp = null;
-
-        for(Movie movieItem: movieList) {
-            if (movieItem.getTitle().equals(movie.getTitle())) {
-                movieTemp = movieItem;
-                break;
-            }
-        }
-
-        return movieTemp;
-    }
-
     public void showLists() {
         for (Movie movie : movieList) {
             System.out.println(movie.toString());
         }
     }
+
 
 }

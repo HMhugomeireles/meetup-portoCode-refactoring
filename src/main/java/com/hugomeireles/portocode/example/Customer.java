@@ -7,6 +7,7 @@ public class Customer {
     private String rating;
 
     public Customer(String firstName, String lastName, String rating) {
+        //if (rating == null) throw new IllegalArgumentException();
         this.firstName = firstName;
         this.lastName = lastName;
         this.rating = rating;
@@ -16,23 +17,8 @@ public class Customer {
         return firstName;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
     public String getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
-        this.rating = rating;
-    }
 }
