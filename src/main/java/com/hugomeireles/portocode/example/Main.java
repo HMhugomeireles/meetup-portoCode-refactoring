@@ -1,5 +1,8 @@
 package com.hugomeireles.portocode.example;
 
+import com.hugomeireles.portocode.example.entity.Customer;
+import com.hugomeireles.portocode.example.entity.Movie;
+
 import java.util.ArrayList;
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.hugomeireles.portocode.example;
+package com.hugomeireles.portocode.example.entity;
 
 public class Customer {
 

@@ -1,10 +1,10 @@
 package com.hugomeireles.portocode.example;
 
+import com.hugomeireles.portocode.example.entity.Customer;
+import com.hugomeireles.portocode.example.entity.Movie;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-
-import org.junit.Assert.*;
 
 import java.util.ArrayList;
 import java.util.List;

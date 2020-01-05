@@ -1,5 +1,9 @@
 package com.hugomeireles.portocode.example;
 
+import com.hugomeireles.portocode.example.entity.Customer;
+import com.hugomeireles.portocode.example.entity.Movie;
+import com.hugomeireles.portocode.example.entity.Rent;
+
 import java.util.List;
 
 public class MovieClub {
